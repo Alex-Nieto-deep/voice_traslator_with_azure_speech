@@ -1,3 +1,4 @@
+import json
 import os
 import gradio as gr
 import azure.cognitiveservices.speech as speech_sdk
@@ -8,52 +9,45 @@ load_dotenv()
 cog_key = os.getenv('COG_SERVICE_KEY')
 cog_reg = os.getenv('COG_SERVICE_REGION')
 
-def translator(audio_file):
+with open('code_languages.json', 'r') as file:
+    languages_data = json.load(file)
+language_names = list(languages_data.keys())
+
+def translator(audio_file, language_input):
 
     try:
         translation_config = speech_sdk.translation.SpeechTranslationConfig(cog_key, cog_reg)
         translation_config.speech_recognition_language = "es-ES"
 
-        translation_config.add_target_language("pt")
-        translation_config.add_target_language("fr")
-        translation_config.add_target_language("en")
+        target_language = languages_data[language_input]["code"][:2]
+        print("target_language", target_language)
+        translation_config.add_target_language(target_language)
 
         audio_config = speech_sdk.AudioConfig(filename=audio_file)
         translator = speech_sdk.translation.TranslationRecognizer(translation_config, audio_config=audio_config)
         result = translator.recognize_once_async().get()
         print(f"texto '{result.text}'")
 
-        translation_fr = result.translations['fr']
-        print(f"Traduccion a Frances: {translation_fr}")
+        translation_text = result.translations[target_language]
+        print(f"Traduccion a {language_input}: {translation_text}")
 
-        translation_pt = result.translations['pt']
-        print(f"Traduccion a Portugues: {translation_pt}")
+        language_save_file_path = text_to_speach(translation_text, language_input)
 
-        translation_en = result.translations['en']
-        print(f"Traduccion a Ingles: {translation_en}")
-
-        fr_save_file_path = text_to_speach(translation_fr, 'fr')
-        pt_save_file_path = text_to_speach(translation_pt, 'pt')
-        en_save_file_path = text_to_speach(translation_en, 'en')
 
     except Exception as ex:
         raise gr.Error("Se ha producido un error traducirndo el texto" + str(ex))
 
-    return fr_save_file_path, pt_save_file_path, en_save_file_path
+    return translation_text, language_save_file_path
 
 def text_to_speach(text: str, language: str):
 
 
     try:
         # Synthesize translation
-        voices = {
-            "fr": "fr-FR-HenriNeural",
-            "en": "en-US-GuyNeural",
-            "pt": "pt-BR-AntonioNeural",
-        }
+        voice = languages_data[language]["voice"]
 
         speech_config = speech_sdk.SpeechConfig(cog_key, cog_reg)
-        speech_config.speech_synthesis_voice_name = voices.get(language)
+        speech_config.speech_synthesis_voice_name = voice
 
         save_file_path = f"audios/{language}.mp3"
         audio_output = speech_sdk.AudioConfig(filename=save_file_path)
@@ -72,15 +66,13 @@ def text_to_speach(text: str, language: str):
 
 app = gr.Interface(
     fn=translator,
-    inputs=gr.Audio(
-        sources=["microphone"],
-        type="filepath",
-        label="Español"
-    ),
+    inputs=[
+        gr.Audio(sources=["microphone"],type="filepath",label="Español"),
+        gr.Dropdown(choices=language_names, label="Seleccciona el idioma a traducir")
+    ],
     outputs=[
-        gr.Audio(label="Frances"),
-        gr.Audio(label="Portugues"),
-        gr.Audio(label="Ingles"),
+        gr.Textbox(label="Traduccion de texto"),
+        gr.Audio(label="Traduccion en audio"),
         ],
     title="Traductor de voz",
     description="Traductor de voz con IA a varios idiomas"

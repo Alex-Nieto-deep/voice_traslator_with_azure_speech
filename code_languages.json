@@ -1,0 +1,186 @@
+{
+  "Arabic (Egypt)": {
+    "code": "ar-EG",
+    "voice": "ar-EG-SalmaNeural"
+  },
+  "Arabic (Saudi Arabia)": {
+    "code": "ar-SA",
+    "voice": "ar-SA-HamedNeural"
+  },
+  "Bulgarian (Bulgaria)": {
+    "code": "bg-BG",
+    "voice": "bg-BG-BorislavNeural"
+  },
+  "Catalan (Spain)": {
+    "code": "ca-ES",
+    "voice": "ca-ES-JoanaNeural"
+  },
+  "Czech (Czech Republic)": {
+    "code": "cs-CZ",
+    "voice": "cs-CZ-AntoninNeural"
+  },
+  "Danish (Denmark)": {
+    "code": "da-DK",
+    "voice": "da-DK-ChristelNeural"
+  },
+  "German (Germany)": {
+    "code": "de-DE",
+    "voice": "de-DE-ConradNeural"
+  },
+  "Greek (Greece)": {
+    "code": "el-GR",
+    "voice": "el-GR-NestorasNeural"
+  },
+  "English (Australia)": {
+    "code": "en-AU",
+    "voice": "en-AU-NatashaNeural"
+  },
+  "English (Canada)": {
+    "code": "en-CA",
+    "voice": "en-CA-LiamNeural"
+  },
+  "English (United Kingdom)": {
+    "code": "en-GB",
+    "voice": "en-GB-RyanNeural"
+  },
+  "English (India)": {
+    "code": "en-IN",
+    "voice": "en-IN-NeerjaNeural"
+  },
+  "English (New Zealand)": {
+    "code": "en-NZ",
+    "voice": "en-NZ-MitchellNeural"
+  },
+  "English (United States)": {
+    "code": "en-US",
+    "voice": "en-US-GuyNeural"
+  },
+  "Spanish (Spain)": {
+    "code": "es-ES",
+    "voice": "es-ES-ElviraNeural"
+  },
+  "Spanish (Mexico)": {
+    "code": "es-MX",
+    "voice": "es-MX-DaliaNeural"
+  },
+  "Finnish (Finland)": {
+    "code": "fi-FI",
+    "voice": "fi-FI-SelmaNeural"
+  },
+  "French (Canada)": {
+    "code": "fr-CA",
+    "voice": "fr-CA-SylvieNeural"
+  },
+  "French (France)": {
+    "code": "fr-FR",
+    "voice": "fr-FR-HenriNeural"
+  },
+  "Hebrew (Israel)": {
+    "code": "he-IL",
+    "voice": "he-IL-AvriNeural"
+  },
+  "Hindi (India)": {
+    "code": "hi-IN",
+    "voice": "hi-IN-MadhurNeural"
+  },
+  "Hungarian (Hungary)": {
+    "code": "hu-HU",
+    "voice": "hu-HU-NoemiNeural"
+  },
+  "Indonesian (Indonesia)": {
+    "code": "id-ID",
+    "voice": "id-ID-ArdiNeural"
+  },
+  "Italian (Italy)": {
+    "code": "it-IT",
+    "voice": "it-IT-IsabellaNeural"
+  },
+  "Japanese (Japan)": {
+    "code": "ja-JP",
+    "voice": "ja-JP-KeitaNeural"
+  },
+  "Korean (Korea)": {
+    "code": "ko-KR",
+    "voice": "ko-KR-InJoonNeural"
+  },
+  "Malay (Malaysia)": {
+    "code": "ms-MY",
+    "voice": "ms-MY-OsmanNeural"
+  },
+  "Norwegian (Norway)": {
+    "code": "nb-NO",
+    "voice": "nb-NO-PernilleNeural"
+  },
+  "Dutch (Netherlands)": {
+    "code": "nl-NL",
+    "voice": "nl-NL-ColetteNeural"
+  },
+  "Polish (Poland)": {
+    "code": "pl-PL",
+    "voice": "pl-PL-ZofiaNeural"
+  },
+  "Portuguese (Brazil)": {
+    "code": "pt-BR",
+    "voice": "pt-BR-AntonioNeural"
+  },
+  "Portuguese (Portugal)": {
+    "code": "pt-PT",
+    "voice": "pt-PT-FernandaNeural"
+  },
+  "Romanian (Romania)": {
+    "code": "ro-RO",
+    "voice": "ro-RO-AlinaNeural"
+  },
+  "Russian (Russia)": {
+    "code": "ru-RU",
+    "voice": "ru-RU-DmitryNeural"
+  },
+  "Slovak (Slovakia)": {
+    "code": "sk-SK",
+    "voice": "sk-SK-LukasNeural"
+  },
+  "Slovenian (Slovenia)": {
+    "code": "sl-SI",
+    "voice": "sl-SI-PetraNeural"
+  },
+  "Swedish (Sweden)": {
+    "code": "sv-SE",
+    "voice": "sv-SE-MattiasNeural"
+  },
+  "Tamil (India)": {
+    "code": "ta-IN",
+    "voice": "ta-IN-ValluvarNeural"
+  },
+  "Telugu (India)": {
+    "code": "te-IN",
+    "voice": "te-IN-MohanaNeural"
+  },
+  "Thai (Thailand)": {
+    "code": "th-TH",
+    "voice": "th-TH-KanyaNeural"
+  },
+  "Turkish (Turkey)": {
+    "code": "tr-TR",
+    "voice": "tr-TR-AhmetNeural"
+  },
+  "Ukrainian (Ukraine)": {
+    "code": "uk-UA",
+    "voice": "uk-UA-OstapNeural"
+  },
+  "Vietnamese (Vietnam)": {
+    "code": "vi-VN",
+    "voice": "vi-VN-HoaiMyNeural"
+  },
+  "Chinese (Simplified, China)": {
+    "code": "zh-CN",
+    "voice": "zh-CN-XiaochenNeural"
+  },
+  "Chinese (Traditional, Hong Kong)": {
+    "code": "zh-HK",
+    "voice": "zh-HK-HiuGaaiNeural"
+  },
+  "Chinese (Traditional, Taiwan)": {
+    "code": "zh-TW",
+    "voice": "zh-TW-HsiaoYuNeural"
+  }
+}

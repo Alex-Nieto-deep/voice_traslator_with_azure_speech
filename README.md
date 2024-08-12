@@ -14,6 +14,7 @@ Este proyecto es una aplicación de traducción de voz que utiliza el servicio d
 - Python 3.9 o superior
 - Una cuenta de Microsoft Azure con acceso al servicio Azure Speech.
 - Las siguientes librerías de Python:
+- cree una carpeta con nombre audios para guardar los audios de las traducciones
 
 ```bash
 pip install -r requirements.txt
